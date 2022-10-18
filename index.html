@@ -1,0 +1,134 @@
+<!-- Header -->
+        <div class="mainHeader">
+            <nav>
+                <ul data-inViewport="slideTop">
+                    <li><h2>ProTECH</h2></li>
+                    <li class="pages" onclick="scrollToPurpose()">Purpose</li>
+                    <li class="pages" onclick="scrollToProcess()">Process</li>
+                    <li class="pages" onclick="scrollToProduct()">Product</li>
+                    <li class="pages" onclick="scrollToContribute()">Contribute</li>
+                </ul>
+            </nav>
+            <div class="header" data-inViewport="slideLeft">
+                <h2>Protecting The World <br> Using Technology</h2>
+                <p>Learn more about what we do to protect the world and <br>what you can do to help!</p>
+                <button onclick="scrollToPurpose()">Find out more</button>
+            </div>  
+        </div>
+        <!-- Header -->
+        <hr>
+        <!-- Purpose Text Section -->
+        <div class="textSection" id="purpose">
+            <h2 data-inViewport="slideLeft">Our Purpose</h2>
+            <p data-inViewport="slideLeft">
+                To create a safe physical and online environment for everyone. <br> <br>
+                Sample Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tristique lacus, ut semper ipsum. 
+                <br><br>Phasellus magna libero, bibendum varius diam rutrum, mattis ornare leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                 Aenean facilisis venenatis purus vel semper. Nam accumsan placerat lobortis. Pellentesque id felis quis mi egestas hendrerit nec sit amet diam. Maecenas quis nunc hendrerit, maximus nunc id, vulputate nulla.
+                 <br><br> Praesent scelerisque porta tortor, non venenatis sapien pulvinar sed. Morbi sed purus dui. Mauris ultricies condimentum enim, posuere pulvinar tellus maximus quis.
+                  Cras eu rhoncus eros. Duis feugiat tortor in lacinia feugiat. Donec egestas vulputate est sit amet fermentum. Aliquam non malesuada urna. 
+                  <br><br> Integer a tellus id neque sodales porttitor vel vestibulum massa. 
+                  <br>Safety of people is very important. This is our goal and purpose.
+            </p>
+        </div>
+        <!-- Purpose Text Section -->
+        <hr>
+        <!-- Process Text Section -->
+        <div class="textSection" id="process">
+            <h2 data-inViewport="slideLeft">Our Process</h2>
+            <div class="boxes">
+                <div class="box" data-inViewport="slideLeft">
+                    <h2>Setting Higher Security</h2>
+                    <p>Higher security ensure safer online platforms</p>
+                    <ion-icon name="open-outline"></ion-icon>
+                </div>
+                <div class="box" data-inViewport="slideLeft">
+                    <h2>Surveilling With AI</h2>
+                    <p>Artificial Face Recognition for Cameras in Public Areas</p>
+                    <ion-icon name="open-outline"></ion-icon>
+                </div>
+                <div class="box" data-inViewport="slideRight">
+                    <h2>Educating Public</h2>
+                    <p>Allow others to be aware of the dangers and stay safe</p>
+                    <ion-icon name="open-outline"></ion-icon>
+                </div>
+
+            </div>
+        </div>
+        <!-- Process Text Section -->
+        <hr>
+        <!-- Product Text Section -->
+        <div class="textSection" id="product">
+            <h2 data-inViewport="slideLeft">Our Product</h2>
+            <div data-inViewport="slideLeft"><img src="drones.jpg"></div>
+            <p data-inViewport="slideRight">AI Drone</p>
+        </div>
+        <!-- Product Text Section -->
+        <hr>
+        <!-- Contribute Text Section --> 
+        <div class="textSection" id="contribute">
+            <h2 data-inViewport="slideLeft">Contribute</h2>
+            <p data-inViewport="slideLeft">You can donate money to us <a href="#">here</a>.</p>
+            <br> 
+            <p id="scrollTop" onclick="scrollToTop()" data-inViewport="slideTop">Back To Top</p>
+        </div>  
+        <!-- Contribute Text Section -->
+        <!-- Footer -->
+        <div class="textSection footer">
+            <h2 data-inViewport="slideLeft">ProTECH</h2>
+            <div class="links-section">
+                <ul>
+                    <h3 data-inViewport="slideLeft">Company</h3>
+                    <li data-inViewport="slideLeft"><a href="#">Our Team</a></li>
+                    <li data-inViewport="slideLeft"><a href="#">Our Journey</a></li>
+                </ul>
+                <ul>
+                    <h3 data-inViewport="slideLeft">More Info</h3>
+                    <li data-inViewport="slideLeft"><a href="#">Join Us</a></li>
+                    <li data-inViewport="slideLeft"><a href="#">Creators</a></li>
+                </ul>
+            </div>
+            <p data-inViewport="slideLeft">Some Rights Reserved. Codingstar Tutorials 2022.</p>
+        </div>
+        <!-- Footer -->
+        <!-- That's All For the content! -->
+        <script>
+            //Add Scroll 
+            function scrollToPurpose() {
+                var purpose = document.getElementById('purpose');
+                purpose.scrollIntoView();
+            }
+            function scrollToProcess() {
+                var process = document.getElementById('process');
+                process.scrollIntoView();
+            }
+            function scrollToProduct() {
+                var product = document.getElementById('product');
+                product.scrollIntoView();
+            }
+            function scrollToContribute() {
+                var contribute = document.getElementById('contribute');
+                contribute.scrollIntoView();
+            }
+
+            //Add Slide In Effect
+            const inViewport = (entries, observer) => {
+                entries.forEach(entry => {
+                    entry.target.classList.toggle("is-inViewport", entry.isIntersecting);
+                });
+            };
+
+            const Obs = new IntersectionObserver(inViewport);
+            const obsOptions = {};
+
+            //Attach observer to every [data-inViewport] element 
+            const ELs_inViewport = document.querySelectorAll('[data-inviewport]');
+            ELs_inViewport.forEach(EL => {
+                Obs.observe(EL, obsOptions);
+            });
+
+            //Scroll To Top
+            function scrollToTop() {
+                window.scrollTo(0, 0);
+            }
+        </script>
