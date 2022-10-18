@@ -40,8 +40,8 @@ nav ul li h2:hover {
 }
 @font-face {
     font-family: 'TECHFont';
-    src: url('custom-font.woff') format('woff'),
-    url('customr-font.woff2') format('woff2');
+    src: url('game_of_squids-webfont.woff') format('woff'),
+    url('game_of_squids-webfont.woff2') format('woff2');
 }
 .pages {
     padding-bottom: 0.8em;
