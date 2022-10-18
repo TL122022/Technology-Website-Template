@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    scroll-behavior: smooth;
+}
+.mainHeader {
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url(Sci-Fi.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+nav {
+    display: flex;
+    position: relative;
+    padding: 4% 6%;
+}
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    padding: 0.6em 0.8em;
+    font-size: 1.5em;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: 'TECHFont', sans-serif;
+}
+nav ul li h2 {
+    font-size: 1.4em;
+    padding-bottom: 1em;
+}
+nav ul li h2:hover {
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'TECHFont';
+    src: url('custom-font.woff') format('woff'),
+    url('customr-font.woff2') format('woff2');
+}
+.pages {
+    padding-bottom: 0.8em;
+    bottom: -0.3em;
+    transition: all 0.5s;
+}
+.pages::after {
+    content: '';
+    display: flex;
+    width: 0%;
+    height: 0.15em;
+    background: #00ffff;
+    margin: auto;
+    transition: all 0.6s cubic-bezier(0.2, 0.9, 0.4, 1);
+}
+.pages:hover::after {
+    width: 100%;
+}
+.header {
+    justify-content: center;
+    align-items: center;
+    display: block;
+}
+.header h2 {
+    padding: 0.8em 1em;
+    text-align: center;
+    font-size: 2.5em;
+    font-family: 'TECHFont', sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    position: relative;
+}
+.header p {
+    padding: 0.8em 1em;
+    font-family: 'TECHFont', sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
+    position: relative;
+    margin: 1em;
+    font-size: 1.2em;
+}
+button {
+    padding: 0.8em 1.2em;
+    color: #010050;
+    cursor: pointer;
+    text-align: center;
+    margin: 1em;
+    position: relative;
+    outline: none;
+    border: none;
+    background: #fff;
+    border-radius: 4em;
+    font-family: 'TECHFont';
+    text-transform: uppercase;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 400;
+    transition: all 0.5s;
+}
+button:hover {
+    background: #010050;
+    color: #fff;
+}
+.textSection {
+    background: linear-gradient(90deg, #000928, #011947);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.textSection h2 {
+    text-align: center;
+    font-family: 'TECHFont';
+    font-weight: 400;
+    padding: 0.5em;
+    text-transform: uppercase;
+    font-size: 3em;
+    margin-top: 2em;
+    position: relative;
+}
+.textSection p {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5em;
+    position: relative;
+    padding: 0.3em;
+}
+#purpose p {
+    padding-bottom: 0.7em;
+}
+.boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+}
+.box {
+    height: 18em;
+    width: 16em;
+    background: linear-gradient(180deg, transparent, #00ffff), url(AI.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 4em;
+    border-radius: 1.5em;
+    display: inline;
+}
+.box h2 {
+    font-size: 1.4em;
+    padding: 1em 0.2em 0.2em 0.2em;
+    margin: 0em;
+}
+.box p {
+    padding: 0.5em 1em;
+}
+.box::before {
+    content: '';
+    width: 16em;
+    height: 18em;
+    position: absolute;
+    transform: translateX(-8em);
+    border-radius: 1.5em;
+    opacity: 0;
+    background: linear-gradient(180deg, #00000070, #00000070);
+    transition: all 0.5s;
+}
+.box:hover::before {
+    opacity: 1;
+}
+ion-icon {
+    font-size: 1.5em;
+    color: #010050;
+    border-radius: 50%;
+    padding: 0.3em;
+    border: 0.085em solid #010050;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+ion-icon:hover {
+    color: #fff;
+    background: #010050;
+}
+img {
+    width: 20em;
+    border-radius: 2em;
+    position: relative;
+    margin: 1em;
+}
+#product p {
+    font-family: 'TECHFont';
+    text-transform: uppercase;
+}
+#contribute p {
+    margin-bottom: 2em;
+}
+#scrollTop {
+    text-decoration: underline;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+#scrollTop:hover {
+    color: #70a5ca;
+}
+.footer {
+    background: #010050;
+    width: 100%;
+    min-height: 30vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    column-gap: 2em;
+}
+.footer h2 {
+    margin: 1em 0.5em;
+}
+.links-section {
+    display: grid;
+    position: relative;
+    gap: 2em 4em;
+    grid-template-columns: repeat(2, max-content);
+}
+.links-section ul {
+    display: inline-block;
+    gap: 2em 3em;
+}
+.links-section ul li {
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+}
+.links-section h3 {
+    font-family: 'Poppins', sans-serif;
+}
+.links-section ul li a {
+    text-decoration: none;
+    transition: all 0.5s;
+}
+.links-section ul li:hover a {
+    color: #ffae77;
+}
+.footer p {
+    padding: 0.4em;
+    text-align: center;
+    font-size: 0.8em;
+    position: absolute;
+    display: block;
+    margin-top: 12em;
+}
+/* Top */
+[data-inViewport="slideTop"] {
+    transition: 1.5s;
+    opacity: 0;
+    transform: translateY(-4em);
+}
+[data-inViewport="slideTop"].is-inViewport {
+    opacity: 1;
+    transform: translateY(0em);
+}
+/* Right */
+[data-inViewport="slideRight"] {
+    transition: 1s;
+    opacity: 0;
+    transform: translateX(4em);
+}
+[data-inViewport="slideRight"].is-inViewport {
+    opacity: 1;
+    transform: translateY(0em);
+}
+/* Bottom */
+[data-inViewport="slideBottom"] {
+    transition: 1.5s;
+    opacity: 0;
+    transform: translateY(4em);
+}
+[data-inViewport="slideBottom"].is-inViewport {
+    opacity: 1;
+    transform: translateY(0em);
+}
+/* Left */
+[data-inViewport="slideLeft"] {
+    transition: 2s;
+    opacity: 0;
+    transform: translateX(-4em);
+}
+[data-inViewport="slideLeft"].is-inViewport {
+    opacity: 1;
+    transform: translateX(0em);
+}
+@media screen and (max-width: 1080px) {
+    .boxes {
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 630px) {
+    .footer {
+        flex-direction: column;
+        min-height: 50vh;
+    }
+    .footer p {
+        position: relative;
+        margin-top: 1em;
+    }
+    /* .links-section {
+        grid-template-columns: repeat(1, max-content);
+    } */
+}
